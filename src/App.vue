@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <div class="menu">
+      <router-link to="/about">About</router-link>
+      <router-link to="/products">Products</router-link>
+    </div>
+    <router-view />
+  </div>
+</template>
+<script>
+import VueRouter from 'vue-router'
+import Products from './Products.vue';
+import About from './About.vue';
+
+export default {
+  router : new VueRouter({
+    routes: [
+      {path: '/about', component: About},
+      {path: '/products', component: Products},
+    ],
+  })
+}
+</script>
+<style lang="scss">
+  
+</style>
