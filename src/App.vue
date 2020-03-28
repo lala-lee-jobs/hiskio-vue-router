@@ -17,7 +17,7 @@ export default {
   router : new VueRouter({
     routes: [
       {path: '/about', component: About},
-      {path: '/products/:id', component: Products},
+      {path: '/products', component: Products},
     ],
   })
 }
