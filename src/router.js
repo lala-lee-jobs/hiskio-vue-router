@@ -21,8 +21,15 @@ export default new VueRouter({
                     component: About,
                     children: [
                         { path: '', component: AboutHome },
-                        { path: 'us', name: 'aus', component: AboutUs },
-                        { path: 'you', name: 'ayou', component: AboutYou },
+                        { path: 'us', component: AboutUs },
+                        { path: 'you', component: AboutYou },
+                        {   
+                            path: 'both', 
+                            components: {
+                                u: AboutUs,
+                                y: AboutYou
+                            }
+                        },
                     ]
                 },
                 {
