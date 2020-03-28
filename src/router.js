@@ -40,8 +40,10 @@ export default new VueRouter({
                     path: 'products',
                     name: 'prod',
                     component: Products,
-                    props:{
-                        id: 923
+                    props: () => {
+                        return {
+                            id: 722
+                        }
                     }
                 }
             ]
