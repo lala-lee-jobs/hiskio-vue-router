@@ -42,7 +42,8 @@ export default new VueRouter({
                     component: Products,
                     props: (route) => {
                         console.log('route', route);
-                        return { id: route.params.id };
+                        // return { id: route.params.id };
+                        return { id: route.query.id };
                     }
                 }
             ]
