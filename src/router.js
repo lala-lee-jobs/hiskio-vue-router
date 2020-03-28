@@ -36,6 +36,10 @@ export default new VueRouter({
                     path: 'products/:id?',
                     name: 'prod',
                     component: Products
+                },
+                {
+                    path: 'aboutus',
+                    redirect: '/about/us'
                 }
             ]
         }
