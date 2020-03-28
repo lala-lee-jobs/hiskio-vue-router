@@ -11,12 +11,12 @@
         <router-link :to="{name:'ayou'}">You</router-link>
         <router-view></router-view>
         -->
-        <!-- 具名視圖 -->
+        <!-- 具名視圖 沒有 name 就默認名字為default -->
         <router-link to="/about/us">Us</router-link>
         <router-link to="/about/you">You</router-link>
         <router-link to="/about/both">Both</router-link>  
-        <router-view name="u" />
-        <router-view name="y" />
+        <router-view />
+        <router-view name="another" />
     </div>
 </template>
 <script>

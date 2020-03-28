@@ -26,8 +26,8 @@ export default new VueRouter({
                         {   
                             path: 'both', 
                             components: {
-                                u: AboutUs,
-                                y: AboutYou
+                                default: AboutUs,
+                                another: AboutYou
                             }
                         },
                     ]
