@@ -13,10 +13,11 @@ import Products from './Products.vue';
 import About from './About.vue';
 
 export default {
+  // 注入路由器
   router : new VueRouter({
     routes: [
       {path: '/about', component: About},
-      {path: '/products', component: Products},
+      {path: '/products/:id', component: Products},
     ],
   })
 }
