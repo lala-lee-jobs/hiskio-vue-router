@@ -39,7 +39,10 @@ export default new VueRouter({
                 },
                 {
                     path: '*',
-                    redirect: {name: 'home'}
+                    redirect: (from) => {
+                        // return '/about';
+                        return { name: 'home' };
+                    }
                 }
             ]
         }
