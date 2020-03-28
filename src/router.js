@@ -37,13 +37,12 @@ export default new VueRouter({
                     ]
                 },
                 {
-                    path: 'products',
+                    path: 'products/:id?',
                     name: 'prod',
                     component: Products,
-                    props: () => {
-                        return {
-                            id: 722
-                        }
+                    props: (route) => {
+                        console.log('route', route);
+                        return { id: route.params.id };
                     }
                 }
             ]
