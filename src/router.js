@@ -20,7 +20,7 @@ export default new VueRouter({
                     path: 'about',
                     component: About,
                     children: [
-                        { path: '', component: AboutHome },
+                        { path: '', name: 'home', component: AboutHome },
                         { path: 'us', component: AboutUs },
                         { path: 'you', component: AboutYou },
                         {   
@@ -39,7 +39,7 @@ export default new VueRouter({
                 },
                 {
                     path: '*',
-                    redirect: '/about/us'
+                    redirect: {name: 'home'}
                 }
             ]
         }
