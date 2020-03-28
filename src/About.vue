@@ -1,8 +1,12 @@
 <template>
     <div>
         <h1>About</h1>
+        <!--
         <router-link to="/about/us">Us</router-link>
         <router-link to="/about/you">You</router-link>
+        -->
+        <router-link :to="{name:'aus'}">Us</router-link>
+        <router-link :to="{name:'ayou'}">You</router-link>
         <router-view></router-view>
     </div>
 </template>

@@ -16,18 +16,19 @@ export default new VueRouter({
             path: '/',
             component: App,
             children: [
-                { 
-                    path: 'about', 
+                {
+                    path: 'about',
                     component: About,
                     children: [
                         { path: '', component: AboutHome },
-                        { path: 'us', component: AboutUs },
-                        { path: 'you', component: AboutYou },
+                        { path: 'us', name: 'aus', component: AboutUs },
+                        { path: 'you', name: 'ayou', component: AboutYou },
                     ]
                 },
                 {
-                  path: 'products', 
-                  component: Products
+                    path: 'products/:id?',
+                    name: 'prod',
+                    component: Products
                 }
             ]
         }
