@@ -18,6 +18,7 @@ export default new VueRouter({
             children: [
                 {
                     path: 'about',
+                    alias: 'abt',
                     component: About,
                     children: [
                         { path: '', name: 'home', component: AboutHome },
@@ -36,13 +37,6 @@ export default new VueRouter({
                     path: 'products/:id?',
                     name: 'prod',
                     component: Products
-                },
-                {
-                    path: '*',
-                    redirect: (from) => {
-                        // return '/about';
-                        return { name: 'home' };
-                    }
                 }
             ]
         }
