@@ -11,6 +11,7 @@ import AboutYou from './AboutYou.vue';
 Vue.use(VueRouter);
 
 export default new VueRouter({
+    mode: 'history',
     routes: [
         {
             path: '/',
@@ -42,8 +43,8 @@ export default new VueRouter({
                     component: Products,
                     props: (route) => {
                         console.log('route', route);
-                        // return { id: route.params.id };
-                        return { id: route.query.id };
+                        // return { id: route.params.id }; // 使用route.params取得路徑部分參數
+                        return { id: route.query.id }; // 也可以使用querystring
                     }
                 }
             ]
