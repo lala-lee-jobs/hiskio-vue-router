@@ -18,14 +18,17 @@ export default new VueRouter({
             children: [
                 {
                     path: 'about',
-                    alias: 'abt',
+                    alias: 'abt', // 可使用 ／#/abt => /#/about
                     component: About,
                     children: [
                         { path: '', name: 'home', component: AboutHome },
                         { path: 'us', component: AboutUs },
                         { path: 'you', component: AboutYou },
                         {   
-                            path: 'both', 
+                            path: 'both',
+                            // alias: '2', // 可使用 /#/about/2 => /#/about/both
+                            // alias: '/2', // 可使用 /#/2 => /#/about/both
+                            alias: ['/2', '2', '3'], // 可設定多個別名，最後都等同於 /#/about/both
                             components: {
                                 default: AboutUs,
                                 another: AboutYou
